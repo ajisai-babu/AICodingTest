@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Flask Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        .nav { margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 8px; }
+        .nav a { margin: 0 15px; text-decoration: none; color: #007bff; }
+        .card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 15px 0; }
+        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>About Flask Demo</h1>
+    <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/users">Users</a>
+        <a href="/about">About</a>
+    </nav>
+    
+    <div class="card">
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><code>GET /api/users</code> - List all users</li>
+            <li><code>POST /api/users</code> - Create a user</li>
+            <li><code>GET /api/users/&lt;id&gt;</code> - Get user by ID</li>
+            <li><code>PUT /api/users/&lt;id&gt;</code> - Update user</li>
+            <li><code>DELETE /api/users/&lt;id&gt;</code> - Delete user</li>
+            <li><code>GET /api/posts</code> - List all posts</li>
+            <li><code>POST /api/posts</code> - Create a post</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>Features</h2>
+        <ul>
+            <li>SQLite database with users and posts tables</li>
+            <li>RESTful API with JSON responses</li>
+            <li>Server-side rendering with Jinja2 templates</li>
+            <li>CRUD operations for users and posts</li>
+        </ul>
+    </div>
+    
+    <p>Current time: {{ now.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+</body>
+</html>
